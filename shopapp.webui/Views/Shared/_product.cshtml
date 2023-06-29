@@ -1,0 +1,91 @@
+@model Product
+
+@* <div class="card mb-3">
+    <img class="card-img-top " src="~/images/@Model.ImageUrl" alt="" style="height: 240px;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <small class="text-muted">
+            ₺@Model.Price
+        </small>
+    </div>
+    <div class="card-footer text-center">
+        
+        <a asp-controller="shop" asp-action="Details" asp-route-url="@Model.Url" class="btn btn-dark btn-sm">Detail</a> 
+        @if (User.Identity.IsAuthenticated)
+        {
+            <form asp-controller="Card" asp-action="AddToCard" style="display: inline;">
+                <input type="hidden" name="productId" value="@Model.ProductId">
+                <input type="hidden" name="quantity" value=1>
+                <button type="submit"  class="btn btn-success btn-sm m">
+                    Add To Card <i class="fa-solid fa-cart-shopping" style="color: #301E67;"></i> 
+                </button>
+            </form>
+        }
+        
+    </div>
+</div> *@
+
+
+@* //YENİ*************************************************************************************************** *@
+
+
+<div class="productCard" >
+    <div class="container1">
+        <div class="card">
+            <div class="img p-3">
+                <img src="~/images/@Model.ImageUrl" width="100%">
+            </div>
+                <div class="content">
+                    <div class="review-container">
+                        <div class="stars">
+                            <span>Reviews</span>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                        <h5 class="price">₺@Model.Price</h5>
+                    </div>
+                    <h4 class="name">@Model.Name</h4>
+                    <div class="description">
+                        <p>@Model.Description</p>
+                    </div>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="button-container">
+                           
+                            <div class="card-button" style="width: 220px;">
+                                <a asp-controller="shop" asp-action="Details" asp-route-url="@Model.Url" class="btn">Detail</a> 
+                            </div>
+                            <div class="like-button">
+                                <form asp-controller="Card" asp-action="AddToCard">
+                                    <input type="hidden" name="productId" value="@Model.ProductId">
+                                    <input type="hidden" name="quantity" value=1>
+                                    <button type="submit"  class="btn">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="button-container">
+                            <div class="card-button" style="width: 220px;" >
+                                <a asp-controller="shop" asp-action="Details" asp-route-url="@Model.Url" class="btn">Detail</a> 
+                            </div>
+                            <div class="like-button">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div> 
+                    }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

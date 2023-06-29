@@ -1,0 +1,46 @@
+@model ProductDetailModel
+
+<div class="card">
+  <div class="row">
+    <div class="col-md-3 p-3">
+      <img src="~/images/@Model.Product.ImageUrl" class="img-fluid" style="height: 100%;">
+    </div>
+    <div class="col-md-9 p-3">
+        <h1 class="mb-3">@Model.Product.Name</h1> <hr>
+
+        @foreach (var item in Model.Categories)
+        {
+          <a asp-controller="Shop" asp-action="list" asp-route-category="@item.Url" class="btn btn-link p-0 mb-3" style="color: black;">@item.Name</a>
+        }
+
+        <div class="mb-3">
+          <h4 class="text-success mb-3">₺@Model.Product.Price</h4>
+
+          <form asp-controller="Card" asp-action="AddToCard" method="post" class="form-inline" style="width:250px;">
+              <input type="hidden" name="productId" value="@Model.Product.ProductId">
+              <div class="input-group mb-3">
+                <input type="number" name="quantity" class="form-control" value=1 min="1" step="1" style="width: px;">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-danger">
+                    <i class="fas fa-cart-plus "></i> Add to Card
+                  </button>
+                </div>
+              </div>
+          </form>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 mt-3">
+      <div class="card">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p class="p-3">@Html.Raw(Model.Product.Description)</p>
+          </blockquote>
+        </div>
+      </div>  
+    </div>
+</div>

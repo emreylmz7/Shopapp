@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8R6XgJoYKq2Ww1TBeuAzwUGVQA8MAIB+CkMvKpHOrX8=",
+  "Source": "shopapp.webapi",
+  "BasePath": "_content/shopapp.webapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

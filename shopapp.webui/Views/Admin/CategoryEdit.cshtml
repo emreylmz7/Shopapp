@@ -1,0 +1,111 @@
+@model CategoryModel
+
+<h1 class="h3">Edit Category</h1>
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Admin" asp-action="CategoryEdit" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" name="CategoryId" value="@Model.CategoryId">
+            <div class="form-group row mt-3">
+                <label asp-for="Name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <label asp-for="Url" class="col-sm-2 col-form-label">Url</label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="Url">
+                    <span asp-validation-for="Url" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="col-sm-10 offset-sm-2">
+                    <button class="btn btn-primary" type="submit">Save Category</button>
+                </div>
+            </div>
+
+            <div id="products">
+                @for (int i = 0; i < Model.Products.Count; i++)
+                {
+                    <input type="hidden" name="Products[@i].ProductId" value="@Model.Products[@i].ProductId">
+                    <input type="hidden" name="Products[@i].ImageUrl" value="@Model.Products[@i].ImageUrl">
+                    <input type="hidden" name="Products[@i].Name" value="@Model.Products[@i].Name">
+                    <input type="hidden" name="Products[@i].Price" value="@Model.Products[@i].Price">
+                    <input type="hidden" name="Products[@i].IsApproved" value="@Model.Products[@i].IsApproved.ToString()">
+                }
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered tabel-sm mt-3">
+                    <thead>
+                        <tr>
+                            <td style="width: 30px; font-weight: bold;">Id</td>
+                            <td style="width: 180px; font-weight: bold;">Image</td>
+                            <td style="font-weight: bold;">Name</td>
+                            <td style="width: 20px; font-weight: bold;">Price</td>
+                            <td style="width: 100px; font-weight: bold;">Proved</td>
+                            <td style="width: 160px; font-weight: bold;"></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Products.Count>0)
+                        {
+                            
+
+                            @foreach (var item in Model.Products)
+                            {
+                                
+                                <tr>
+                                    <td>@item.ProductId</td>
+                                    <td><img src="~/images/@item.ImageUrl" width="160"></td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Price</td>
+                                    <td>
+                                        @if (item.IsApproved)
+                                        {
+                                            <i class="fa-solid fa-circle-check fa-xl" style="color: #04b919;"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="fa-solid fa-circle-xmark fa-xl" style="color: #f91515;"></i>
+                                        }
+                                    </td>
+                                    <td>
+                                        <form action="/admin/deletefromcategory" method="post" style="display: inline;">
+                                            <input type="hidden" name="productId" value="@item.ProductId">
+                                            <input type="hidden" name="categoryId" value="@Model.CategoryId">
+                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        </form>
+                                        <a href="/admin/products/@item.ProductId" class="btn btn-primary btn-sm mr-2">Edit</a>
+                                        
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <div class="alert alert-warning">
+                                <h3>No Products</h3>
+                            </div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+@section Scripts
+{
+    <script src="/modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+

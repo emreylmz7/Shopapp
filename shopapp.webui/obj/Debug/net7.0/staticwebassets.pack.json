@@ -1,0 +1,101 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\css\\loginPage.css",
+      "PackagePath": "staticwebassets\\css\\loginPage.css"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\css\\productCard.css",
+      "PackagePath": "staticwebassets\\css\\productCard.css"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\css\\registerPage.css",
+      "PackagePath": "staticwebassets\\css\\registerPage.css"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\1.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\10.jpg",
+      "PackagePath": "staticwebassets\\images\\10.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\11.jpg",
+      "PackagePath": "staticwebassets\\images\\11.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\12.jpg",
+      "PackagePath": "staticwebassets\\images\\12.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\13.jpg",
+      "PackagePath": "staticwebassets\\images\\13.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\14.jpeg",
+      "PackagePath": "staticwebassets\\images\\14.jpeg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\1804c57f-149b-4ed8-9646-dc0026ad7b55.jpeg",
+      "PackagePath": "staticwebassets\\images\\1804c57f-149b-4ed8-9646-dc0026ad7b55.jpeg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\2.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\3.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\4.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\5.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\6.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\7.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\8.jpg",
+      "PackagePath": "staticwebassets\\images\\8.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\9.jpg",
+      "PackagePath": "staticwebassets\\images\\9.jpg"
+    },
+    {
+      "Id": "D:\\Web Dev. Road\\.Net Core\\shopapp\\shopapp.webui\\wwwroot\\images\\panel.png",
+      "PackagePath": "staticwebassets\\images\\panel.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.shopapp.webui.props",
+      "PackagePath": "build\\shopapp.webui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.shopapp.webui.props",
+      "PackagePath": "buildMultiTargeting\\shopapp.webui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.shopapp.webui.props",
+      "PackagePath": "buildTransitive\\shopapp.webui.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.shopapp.webui.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

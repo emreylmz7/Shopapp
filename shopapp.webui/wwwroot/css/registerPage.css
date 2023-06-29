@@ -1,0 +1,9 @@
+html,
+body {
+  height: 100%;
+}
+
+#registerPage{
+  max-width: 800px;
+  padding: 1rem;
+}

@@ -1,0 +1,73 @@
+@model ProductListViewModel
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="h3">Admin Products</h1>
+        <hr>
+        <table class="table table-bordered mt-3" >
+            <thead>
+                <tr>
+                    <td style="width: 30px; font-weight: bold;">Id</td>
+                    <td style="width: 180px; font-weight: bold;">Image</td>
+                    <td style="font-weight: bold;">Name</td>
+                    <td style="width: 20px; font-weight: bold;">Price</td>
+                    <td style="width: 100px; font-weight: bold;">HomePage</td>
+                    <td style="width: 100px; font-weight: bold;">Proved</td>
+                    <td style="width: 160px; font-weight: bold;"></td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Products.Count>0)
+                {
+                    @foreach (var item in Model.Products)
+                    {
+                        
+                        <tr>
+                            <td>@item.ProductId</td>
+                            <td><img src="~/images/@item.ImageUrl" width="160" style="border-radius: 10px;"></td>
+                            <td>@item.Name</td>
+                            <td>@item.Price</td>
+                            <td>
+                                @if (item.IsHome)
+                                {
+                                    <i class="fa-solid fa-circle-check fa-xl" style="color: #04b919;"></i>
+                                }
+                                else
+                                {
+                                    <i class="fa-solid fa-circle-xmark fa-xl" style="color: #f91515;"></i>
+                                }
+                            </td>
+                            <td>
+                                @if (item.IsApproved)
+                                {
+                                    <i class="fa-solid fa-circle-check fa-xl" style="color: #04b919;"></i>
+                                }
+                                else
+                                {
+                                    <i class="fa-solid fa-circle-xmark fa-xl" style="color: #f91515;"></i>
+                                }
+                            </td>
+                            <td>
+                                <form action="/admin/deleteproduct" method="post" style="display: inline;">
+                                    <input type="hidden" name="productId" value="@item.ProductId">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                                <a href="/admin/products/@item.ProductId" class="btn btn-primary btn-sm mr-2">Edit</a>
+                                
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-warning">
+                        <h3>No Products</h3>
+                    </div>
+                }
+            </tbody>
+        </table>
+
+        <a class="btn btn-primary text-center" href="/admin/products/create" style="justify-content: center;"> Add Product</a>
+    </div>
+</div>

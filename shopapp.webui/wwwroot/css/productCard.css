@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.productCard{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    
+}
+
+.container1{
+    display: grid;
+    place-items: center;
+    /* height: 100vh; */
+    /* margin: 1em; */
+    margin-bottom: 20px;
+    font-family: "Poppins";
+    
+}
+.card{
+    width: 100%;
+    box-shadow: 0 10px 20px rgb(0,0,0, .2);
+    border-radius: 1.2em;
+}
+.content{
+    background: #fff;
+    margin: 1em;
+    
+}
+.img{
+    /* background: url("~/images/1.jpg") center/cover; */
+    width: 100%;
+    height: 265px;
+    /* border-radius: 1.2em 1.2em 0 0; */
+}
+.review-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .6em;
+}
+.stars i{
+    color: rgb(255,238,0);
+    font-size: .8em;
+}
+.stars span{
+    font-size: .85em;
+    color: rgb(36,36,36);
+}
+.name, .price{
+    font-size: 1.3em;
+    color: black;
+}
+.description{
+    margin: .6em 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    margin-top: 1.5em;
+}
+.card-button{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: #132238;
+    padding: .5em;
+    border-radius: .5em;
+    cursor: pointer;
+    max-height: 55px;
+}
+.card-icon, .like-button{
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2em;
+    line-height: 1.92em;
+    background: #364E68;
+}
+.card-icon, .like-button{
+    padding: .5em .8em;
+}
+.card-button p{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.btn{
+    padding: 0px;
+    color: #DDE6ED;
+}
+#categorySide{
+    box-shadow: 0 10px 20px rgb(0,0,0, .2);
+    border-radius: 10px;
+    font-family: "Poppins";
+}
+#navbar{
+    font-family: "Poppins";
+}
+
+
+@media screen and(min-width: 500px) {
+    .card{
+        width: 350px;
+        margin: 0 auto;
+    }
+}
